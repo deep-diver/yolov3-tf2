@@ -11,12 +11,12 @@ from yolov3_tf2.models import (
 from yolov3_tf2.dataset import transform_images
 from yolov3_tf2.utils import draw_outputs
 
-flags.DEFINE_string('classes', './yolo3-tf2/data/coco.names', 'path to classes file')
-flags.DEFINE_string('weights', './yolo3-tf2/checkpoints/yolov3.tf',
+flags.DEFINE_string('classes', './yolov3-tf2/data/coco.names', 'path to classes file')
+flags.DEFINE_string('weights', './yolov3-tf2/checkpoints/yolov3.tf',
                     'path to weights file')
 flags.DEFINE_boolean('tiny', False, 'yolov3 or yolov3-tiny')
-flags.DEFINE_string('image', './yolo3-tf2/data/girl.png', 'path to input image')
-flags.DEFINE_string('output', './yolo3-tf2/output.jpg', 'path to output image')
+flags.DEFINE_string('image', './yolov3-tf2/data/girl.png', 'path to input image')
+flags.DEFINE_string('output', './yolov3-tf2/output.jpg', 'path to output image')
 
 
 def main(_argv):
