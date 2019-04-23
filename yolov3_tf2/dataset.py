@@ -1,5 +1,5 @@
 import tensorflow as tf
-
+import os
 
 @tf.function
 def transform_targets_for_output(y_true, grid_size, anchor_idxs, classes):
@@ -82,7 +82,7 @@ IMAGE_FEATURE_MAP = {
     'image/height': tf.io.FixedLenFeature([], tf.int64),
     'image/filename': tf.io.FixedLenFeature([], tf.string),
     'image/source_id': tf.io.FixedLenFeature([], tf.string),
-    'image/key/sha256': tf.io.FixedLenFeature([], tf.string),
+    # 'image/key/sha256': tf.io.FixedLenFeature([], tf.string),
     'image/encoded': tf.io.FixedLenFeature([], tf.string),
     'image/format': tf.io.FixedLenFeature([], tf.string),
     'image/object/bbox/xmin': tf.io.VarLenFeature(tf.float32),
@@ -91,9 +91,9 @@ IMAGE_FEATURE_MAP = {
     'image/object/bbox/ymax': tf.io.VarLenFeature(tf.float32),
     'image/object/class/text': tf.io.VarLenFeature(tf.string),
     'image/object/class/label': tf.io.VarLenFeature(tf.int64),
-    'image/object/difficult': tf.io.VarLenFeature(tf.int64),
-    'image/object/truncated': tf.io.VarLenFeature(tf.int64),
-    'image/object/view': tf.io.VarLenFeature(tf.string),
+    # 'image/object/difficult': tf.io.VarLenFeature(tf.int64),
+    # 'image/object/truncated': tf.io.VarLenFeature(tf.int64),
+    # 'image/object/view': tf.io.VarLenFeature(tf.string),
 }
 
 

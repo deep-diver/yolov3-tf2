@@ -1,4 +1,5 @@
 from absl import app, flags, logging
+import os
 from absl.flags import FLAGS
 import tensorflow as tf
 import numpy as np
@@ -49,7 +50,8 @@ def main(_argv):
         model = YoloV3(FLAGS.size, training=True)
         anchors = yolo_anchors
         anchor_masks = yolo_anchor_masks
-
+    cwd = os.getcwd()
+    print(cwd)
     train_dataset = dataset.load_fake_dataset()
     if FLAGS.dataset:
         train_dataset = dataset.load_tfrecord_dataset(
