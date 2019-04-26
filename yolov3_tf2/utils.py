@@ -109,7 +109,7 @@ def draw_outputs(img, outputs, class_names):
         img = cv2.rectangle(img, x1y1, x2y2, (255, 0, 0), 1)
         img = cv2.putText(img, '{} {:.4f}'.format(
             class_names[classes[i]], objectness[i]),
-            x1y1, cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.5, (0, 0, 255), 2)
+            x1y1, cv2.FONT_HERSHEY_COMPLEX_SMALL, 0.8, (0, 0, 255), 2)
     return img
 
 
